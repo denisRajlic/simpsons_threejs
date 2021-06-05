@@ -43,9 +43,10 @@ renderer.render(scene, camera);
 // Three.js has a lot of built-in geometries like box, sphere, ...
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 
+const torusTexture = new THREE.TextureLoader().load('donut.jpg');
 // 2. Material - like wrapping paper for an object
 const material = new THREE.MeshStandardMaterial({
-  color: 0xff6347,
+  map: torusTexture,
 });
 
 // 3. Mesh - combine geometry with material
@@ -87,7 +88,7 @@ const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
-const meTexture = new THREE.TextureLoader().load('me.jpg');
+const meTexture = new THREE.TextureLoader().load('homer.jpg');
 
 const me = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
