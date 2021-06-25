@@ -9,3 +9,12 @@ A 3D web application, where you can see moving objects which contain information
   - camera
   - scenes
   - textures
+
+## How To Run
+
+- clone repo
+- run following command
+
+```sh
+npm run dev
+```
